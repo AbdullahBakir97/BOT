@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Post</title>
+</head>
+<body>
+    <h1>Create a New Post</h1>
+    <form method="POST" action="{% url 'create_post' %}">
+        {% csrf_token %}
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" id="subject" required><br><br>
+        
+        <label for="important_things">Important Things:</label>
+        <textarea name="important_things" id="important_things"></textarea><br><br>
+        
+        <label for="libraries">Libraries:</label>
+        <textarea name="libraries" id="libraries"></textarea><br><br>
+        
+        <label for="frameworks">Frameworks:</label>
+        <textarea name="frameworks" id="frameworks"></textarea><br><br>
+        
+        <label for="tools">Tools:</label>
+        <textarea name="tools" id="tools"></textarea><br><br>
+        
+        <label for="best_practices">Best Practices:</label>
+        <textarea name="best_practices" id="best_practices"></textarea><br><br>
+        
+        <label for="benefits">Benefits:</label>
+        <textarea name="benefits" id="benefits"></textarea><br><br>
+        
+        <label for="examples">Examples:</label>
+        <textarea name="examples" id="examples"></textarea><br><br>
+        
+        <label for="implementation_instructions">Implementation Instructions:</label>
+        <textarea name="implementation_instructions" id="implementation_instructions"></textarea><br><br>
+        
+        <label for="installation_guidelines">Installation Guidelines:</label>
+        <textarea name="installation_guidelines" id="installation_guidelines"></textarea><br><br>
+        
+        <label for="settings">Settings:</label>
+        <textarea name="settings" id="settings"></textarea><br><br>
+        
+        <label for="things_to_avoid">Things to Avoid:</label>
+        <textarea name="things_to_avoid" id="things_to_avoid"></textarea><br><br>
+        
+        <label for="top_keywords">Top Keywords:</label>
+        <textarea name="top_keywords" id="top_keywords"></textarea><br><br>
+        
+        <input type="submit" value="Create Post">
+    </form>
+</body>
+</html>

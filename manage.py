@@ -21,7 +21,7 @@ def main():
 
 
 # Load the pre-trained BERT model
-    model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=num_labels)
+    # model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=num_labels)
 
 # Rest of your code
 # ...

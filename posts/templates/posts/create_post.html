@@ -1,50 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Post</title>
+    <!-- Add any additional CSS styling or links to external stylesheets here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Add any additional styling as needed */
+    </style>
 </head>
 <body>
     <h1>Create a New Post</h1>
     <form method="POST" action="{% url 'create_post' %}">
         {% csrf_token %}
+        
         <label for="subject">Subject:</label>
-        <input type="text" name="subject" id="subject" required><br><br>
+        <input type="text" name="subject" id="subject" required>
         
         <label for="important_things">Important Things:</label>
-        <textarea name="important_things" id="important_things"></textarea><br><br>
+        <textarea name="important_things" id="important_things" rows="4"></textarea>
         
         <label for="libraries">Libraries:</label>
-        <textarea name="libraries" id="libraries"></textarea><br><br>
+        <textarea name="libraries" id="libraries" rows="4"></textarea>
         
         <label for="frameworks">Frameworks:</label>
-        <textarea name="frameworks" id="frameworks"></textarea><br><br>
+        <textarea name="frameworks" id="frameworks" rows="4"></textarea>
         
         <label for="tools">Tools:</label>
-        <textarea name="tools" id="tools"></textarea><br><br>
+        <textarea name="tools" id="tools" rows="4"></textarea>
         
         <label for="best_practices">Best Practices:</label>
-        <textarea name="best_practices" id="best_practices"></textarea><br><br>
+        <textarea name="best_practices" id="best_practices" rows="4"></textarea>
         
         <label for="benefits">Benefits:</label>
-        <textarea name="benefits" id="benefits"></textarea><br><br>
+        <textarea name="benefits" id="benefits" rows="4"></textarea>
         
         <label for="examples">Examples:</label>
-        <textarea name="examples" id="examples"></textarea><br><br>
+        <textarea name="examples" id="examples" rows="4"></textarea>
         
         <label for="implementation_instructions">Implementation Instructions:</label>
-        <textarea name="implementation_instructions" id="implementation_instructions"></textarea><br><br>
+        <textarea name="implementation_instructions" id="implementation_instructions" rows="4"></textarea>
         
         <label for="installation_guidelines">Installation Guidelines:</label>
-        <textarea name="installation_guidelines" id="installation_guidelines"></textarea><br><br>
+        <textarea name="installation_guidelines" id="installation_guidelines" rows="4"></textarea>
         
         <label for="settings">Settings:</label>
-        <textarea name="settings" id="settings"></textarea><br><br>
+        <textarea name="settings" id="settings" rows="4"></textarea>
         
         <label for="things_to_avoid">Things to Avoid:</label>
-        <textarea name="things_to_avoid" id="things_to_avoid"></textarea><br><br>
+        <textarea name="things_to_avoid" id="things_to_avoid" rows="4"></textarea>
         
         <label for="top_keywords">Top Keywords:</label>
-        <textarea name="top_keywords" id="top_keywords"></textarea><br><br>
+        <textarea name="top_keywords" id="top_keywords" rows="4"></textarea>
         
         <input type="submit" value="Create Post">
     </form>

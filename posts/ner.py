@@ -1,20 +1,18 @@
 import spacy
-from spacy.lang.en import English
+
+# Load the spaCy language model
+nlp = spacy.load('en_core_web_sm')
 
 def extract_named_entities_with_spacy(text):
-    nlp = spacy.load('en_core_web_sm')
-    tokenizer = English().Defaults.create_tokenizer(nlp)
-    
-    # Tokenize the text
-    tokens = tokenizer(text)
-    
-    # Create a spaCy document
-    doc = spacy.tokens.Doc(nlp.vocab, words=[token.text for token in tokens])
-    
-    # Apply named entity recognition
-    nlp.get_pipe("ner")(doc)
+    # Create a spaCy document that also runs the NER pipeline component
+    doc = nlp(text)
     
     # Extract named entities
-    named_entities = [ent.text for ent in doc.ents]
+    named_entities = [(ent.text, ent.label_) for ent in doc.ents]
     
     return named_entities
+
+# Example usage
+if __name__ == "__main__":
+    sample_text = "Apple is looking at buying U.K. startup for $1 billion"
+    print(extract_named_entities_with_spacy(sample_text))

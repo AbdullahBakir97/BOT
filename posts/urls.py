@@ -1,10 +1,7 @@
 from django.urls import path
-from . import views
-
-app_name = 'posts'
+from .views import create_post, generated_post
 
 urlpatterns = [
-    path('post/new/', views.create_post, name='create_post'),
-    path('post/create/', views.create_post, name='post_create'),
-
+    path('create/', create_post, name='create_post'),
+     path('generated_post/', generated_post, name='generated_post'),
 ]

@@ -1,19 +1,15 @@
 from django.shortcuts import render
 from .models import Post
-import nltk
+from .forms import PostCreationForm
+from .ner import extract_named_entities_with_spacy
+from .textrank import extract_keywords_with_textrank
+from .tfidf import apply_tfidf
 import string
-import numpy as np
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-from nltk.stem import PorterStemmer
 from nltk.stem import WordNetLemmatizer
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.decomposition import TruncatedSVD
-import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 from spacy.lang.en import English
-from .ner import extract_named_entities_with_spacy
+import spacy  # Import spacy here
 
 # Load the spaCy language model
 nlp = spacy.load('en_core_web_sm')
@@ -38,48 +34,71 @@ def preprocess_input(text):
 
 def create_post(request):
     if request.method == 'POST':
-        # Retrieve user input from the form
-        subject = request.POST.get('subject')
-        important_things = request.POST.get('important_things')
-        libraries = request.POST.get('libraries')
-        frameworks = request.POST.get('frameworks')
-        tools = request.POST.get('tools')
-        best_practices = request.POST.get('best_practices')
-        benefits = request.POST.get('benefits')
-        examples = request.POST.get('examples')
-        implementation_instructions = request.POST.get('implementation_instructions')
-        installation_guidelines = request.POST.get('installation_guidelines')
-        settings = request.POST.get('settings')
-        things_to_avoid = request.POST.get('things_to_avoid')
-        top_keywords = request.POST.get('top_keywords')
+        form = PostCreationForm(request.POST)
+        if form.is_valid():
+            # Cleaned data from the form
+            cleaned_data = form.cleaned_data
 
-        # Preprocess the user input
-        preprocessed_subject = preprocess_input(subject)
+            # Preprocess the user input
+            preprocessed_subject = preprocess_input(cleaned_data['subject'])
+            preprocessed_important_things = preprocess_input(cleaned_data['important_things'])
 
-        # Apply spaCy for NER
-        named_entities = extract_named_entities_with_spacy(preprocessed_subject)
+            # Apply spaCy for NER
+            named_entities_subject = extract_named_entities_with_spacy(preprocessed_subject)
 
-        # Your remaining code for TF-IDF and keyword extraction can follow here
+            # Create a list of preprocessed documents
+            preprocessed_documents = [
+                preprocessed_subject,
+                preprocessed_important_things,
+                preprocess_input(cleaned_data['libraries']),
+                preprocess_input(cleaned_data['frameworks']),
+                preprocess_input(cleaned_data['tools']),
+                preprocess_input(cleaned_data['best_practices']),
+                preprocess_input(cleaned_data['benefits']),
+                preprocess_input(cleaned_data['examples']),
+                preprocess_input(cleaned_data['implementation_instructions']),
+                preprocess_input(cleaned_data['installation_guidelines']),
+                preprocess_input(cleaned_data['settings']),
+                preprocess_input(cleaned_data['things_to_avoid']),
+                preprocess_input(cleaned_data['top_keywords']),
+            ]
 
-        # Create a new post object
-        post = Post.objects.create(
-            subject=subject,
-            important_things=important_things,
-            libraries=libraries,
-            frameworks=frameworks,
-            tools=tools,
-            best_practices=best_practices,
-            benefits=benefits,
-            examples=examples,
-            implementation_instructions=implementation_instructions,
-            installation_guidelines=installation_guidelines,
-            settings=settings,
-            things_to_avoid=things_to_avoid,
-            named_entities=named_entities,
-            top_keywords=top_keywords,
-        )
+            # Apply TextRank for keyword extraction
+            textrank_keywords = extract_keywords_with_textrank(preprocessed_subject)
 
-        # Render the generated post content to the user
-        return render(request, 'post.html', {'post': post})
+            # Apply TF-IDF vectorization
+            tfidf_matrix, feature_names = apply_tfidf(preprocessed_documents)
 
-    return render(request, 'create_post.html')
+            # Create a new post object
+            post = Post.objects.create(
+                subject=preprocessed_subject,
+                important_things=preprocessed_important_things,
+                libraries=preprocess_input(cleaned_data['libraries']),
+                frameworks=preprocess_input(cleaned_data['frameworks']),
+                tools=preprocess_input(cleaned_data['tools']),
+                best_practices=preprocess_input(cleaned_data['best_practices']),
+                benefits=preprocess_input(cleaned_data['benefits']),
+                examples=preprocess_input(cleaned_data['examples']),
+                implementation_instructions=preprocess_input(cleaned_data['implementation_instructions']),
+                installation_guidelines=preprocess_input(cleaned_data['installation_guidelines']),
+                settings=preprocess_input(cleaned_data['settings']),
+                things_to_avoid=preprocess_input(cleaned_data['things_to_avoid']),
+                top_keywords=preprocess_input(cleaned_data['top_keywords']),
+                named_entities_subject=named_entities_subject,
+                textrank_keywords=textrank_keywords,
+            )
+
+            # Render the generated post content to the user
+            return render(request, 'post.html', {'post': post, 'tfidf_matrix': tfidf_matrix, 'feature_names': feature_names})
+
+    else:
+        form = PostCreationForm()
+
+    return render(request, 'create_post.html', {'form': form})
+
+def generated_post(request):
+    # Fetch the most recent post
+    latest_post = Post.objects.latest('created_at')
+
+    # Render the 'generated_post.html' template with the post data
+    return render(request, 'generated_post.html', {'post': latest_post})

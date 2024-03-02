@@ -15,9 +15,19 @@ import spacy  # Import spacy here
 nlp = spacy.load('en_core_web_sm')
 
 # Create a tokenizer
-tokenizer = English().Defaults.create_tokenizer(nlp)
+tokenizer = nlp.tokenizer
+
 
 def preprocess_input(text):
+    """
+    Preprocesses the input text by tokenizing, lemmatizing, removing stopwords, and punctuation.
+
+    Args:
+        text (str): The input text to preprocess.
+
+    Returns:
+        str: The preprocessed text.
+    """
     # Tokenize the text
     tokens = tokenizer(text)
 
@@ -32,7 +42,19 @@ def preprocess_input(text):
     preprocessed_text = ' '.join(tokens)
     return preprocessed_text
 
+
 def create_post(request):
+    """
+    View function to handle the creation of a new post.
+
+    Args:
+        request (HttpRequest): The request object.
+
+    Returns:
+        HttpResponse: The response object.
+    """
+    template_name = "posts/create_post.html"
+
     if request.method == 'POST':
         form = PostCreationForm(request.POST)
         if form.is_valid():
@@ -89,14 +111,25 @@ def create_post(request):
             )
 
             # Render the generated post content to the user
-            return render(request, 'post.html', {'post': post, 'tfidf_matrix': tfidf_matrix, 'feature_names': feature_names})
+            return render(request, 'posts/post.html', {'post': post, 'tfidf_matrix': tfidf_matrix,
+                                                        'feature_names': feature_names})
 
     else:
         form = PostCreationForm()
 
-    return render(request, 'create_post.html', {'form': form})
+    return render(request, 'posts/create_post.html', {'form': form})
+
 
 def generated_post(request):
+    """
+    View function to display the most recently generated post.
+
+    Args:
+        request (HttpRequest): The request object.
+
+    Returns:
+        HttpResponse: The response object.
+    """
     # Fetch the most recent post
     latest_post = Post.objects.latest('created_at')
 

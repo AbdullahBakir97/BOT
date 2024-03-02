@@ -41,9 +41,17 @@ INSTALLED_APPS = [
     # my apps
     'bot',
     'posts',
-
+    'transformers',
     
 ]
+
+TRANSFORMERS_SETTINGS = {
+    'CACHE_DIR': '/path/to/cache/directory',
+    'MAX_LENGTH': 512,
+    'MAX_AGE': 3600,
+    'MAX_COUNT': 1000,
+    'MAX_CACHE_SIZE': 1024 * 1024 * 1024,
+}
 
 LIBRARIES = [
     
@@ -67,7 +75,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,0 +1,270 @@
+.git
+bot
+db.sqlite3
+manage.py
+posts
+project
+todo.md
+Files in C:\Users\B\Project\bot\src:
+
+Folder: C:\Users\B\Project\bot\src
+db.sqlite3
+file_names.txt
+manage.py
+todo.md
+
+Folder: C:\Users\B\Project\bot\src\.git
+COMMIT_EDITMSG
+config
+description
+HEAD
+index
+
+Folder: C:\Users\B\Project\bot\src\.git\hooks
+applypatch-msg.sample
+commit-msg.sample
+fsmonitor-watchman.sample
+post-update.sample
+pre-applypatch.sample
+pre-commit.sample
+pre-merge-commit.sample
+pre-push.sample
+pre-rebase.sample
+pre-receive.sample
+prepare-commit-msg.sample
+push-to-checkout.sample
+update.sample
+
+Folder: C:\Users\B\Project\bot\src\.git\info
+exclude
+
+Folder: C:\Users\B\Project\bot\src\.git\logs
+HEAD
+
+Folder: C:\Users\B\Project\bot\src\.git\logs\refs
+
+Folder: C:\Users\B\Project\bot\src\.git\logs\refs\heads
+first
+
+Folder: C:\Users\B\Project\bot\src\.git\logs\refs\remotes
+
+Folder: C:\Users\B\Project\bot\src\.git\logs\refs\remotes\origin
+first
+main
+
+Folder: C:\Users\B\Project\bot\src\.git\objects
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\08
+e805714e689aeb06452b9812ba9ccab69dcab9
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\09
+9ff0d4f125ed42dc174c6167cd3a5b2dc87b23
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\0c
+789ed6ebfbed1d95cb71351000df52c92025da
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\0d
+bd3ce19a3cc62aec7d9d6c3504e869dfe569a5
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\17
+e93b065dafccca4875e79d821e43911e345b42
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\1c
+d7ff2e777438a9e2f10782d5aa55ef1771e290
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\20
+571578b0a53f6b0a75f0922e52a8970934c741
+e99d736f941d2ac3ea53a7c0377296b4067bf9
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\26
+84fd709af097b7f575dd84bbaeff87f3fed4b8
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\27
+c039acc2ec0c308b101d6a7a4a701d2b57b931
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\2c
+49f3ac22774ee37666fd8bad6f7ed1c8069756
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\31
+81f0043c0dda69e7ec39d5e394c10ff4a4bbc5
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\32
+8015c0baa7a33cb24eadb3a8410ca228ab14d0
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\36
+a1a9b9ecdf6aa76349d16467928d1b480bb71a
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\37
+d258f7d51690d27e59c40a954cde4e9a5b897b
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\3d
+b37b434e141ab63cb804750d708e13ff1327d2
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\41
+718745b2554377b0a912f3d242c34c07c6b474
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\45
+89aa7b4a028e7eb7cf83611e06b368da17f19d
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\49
+99e0176c9601fe53c73cc54055f28b207d10a2
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\50
+029ccec8cd6da616b16db8ee4b292adac7d9f8
+87b98b7db1600a973ea17c0f9ec7df6490aa13
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\52
+4187801e7aab4c8f3ca9d380f3e29046f750cb
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\56
+37ceb344c9aa09e547e1c68c52a695d99404a5
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\59
+7c60cfa9cb621446c433010785a083c171ca2c
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\5c
+6f039ffa77c214a603af868f93b079d4dc5dc1
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\68
+4174afd679de6ae98cd19289b504226b720f0c
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\6a
+50fab1e8890307156f48e0d16adb2c06da5aff
+f67fb9100a1f1d5b42614b15648b8469f01c3c
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\6e
+15681431fcded0510f66fe4a0ed675fed59586
+d56d7b8a798209d4abc2ea4ae26712454a93f5
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\71
+a836239075aa6e6e4ecb700e9c42c95c022d91
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\79
+bc8d9a6efc22775f118d9723582441c88b8a93
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\7c
+e503c2dd97ba78597f6ff6e4393132753573f6
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\8c
+38f3f3dad51e4585f3984282c2a4bec5349c1e
+46bcb68ece22523b48ae5aa7fcf4349c735777
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\91
+8b15fa7f52b55ff3a6c62d5e39480a0e4bf580
+ea44a218fbd2f408430959283f0419c921093e
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\92
+80d31f7c184f68d2a8ef91eb796a667ff10d53
+99f76ec8d94b86d4d046cc38d003c43b15ae36
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\9d
+1dcfdaf1a6857c5f83dc27019c7600e1ffaff8
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\b1
+8ed0dcb3371478f1ca309cde1ef0749cd42a53
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\b3
+f335792c1902d8714f526a8b0fed61f175a886
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\b8
+9c667432a8be38f970c42b455a7c197391a618
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\bf
+b308c531bc8886ab7f7a6a0aeb7ba829aca600
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\c7
+a959e71788a69f03ab0187334c4aaee656168a
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\cd
+336a8955d67015de616ce12813a3f0b0369f25
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\ce
+ff8608808c11e537cc4ed4eef9d1150f7f959f
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\df
+b8da18482094e338de8c6d6bc8bd18ba377257
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\e6
+9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\f1
+4337a3f806432efd89c8dad9f3da3ac0e863f1
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\fc
+d714528bff3c175d20b05a41d2534e98f60d02
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\ff
+802aae0dfbc29f39529099ce516376d2da2bb2
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\info
+
+Folder: C:\Users\B\Project\bot\src\.git\objects\pack
+
+Folder: C:\Users\B\Project\bot\src\.git\refs
+
+Folder: C:\Users\B\Project\bot\src\.git\refs\heads
+first
+
+Folder: C:\Users\B\Project\bot\src\.git\refs\remotes
+
+Folder: C:\Users\B\Project\bot\src\.git\refs\remotes\origin
+first
+main
+
+Folder: C:\Users\B\Project\bot\src\.git\refs\tags
+
+Folder: C:\Users\B\Project\bot\src\bot
+admin.py
+apps.py
+models.py
+tests.py
+views.py
+__init__.py
+
+Folder: C:\Users\B\Project\bot\src\bot\migrations
+__init__.py
+
+Folder: C:\Users\B\Project\bot\src\bot\__pycache__
+apps.cpython-311.pyc
+__init__.cpython-311.pyc
+
+Folder: C:\Users\B\Project\bot\src\posts
+admin.py
+apps.py
+bert_keyword_extraction.py
+create_file_names.py
+models.py
+ner.py
+tests.py
+textrank.py
+tfidf.py
+urls.py
+utils.py
+views.py
+__init__.py
+
+Folder: C:\Users\B\Project\bot\src\posts\migrations
+__init__.py
+
+Folder: C:\Users\B\Project\bot\src\posts\templates
+
+Folder: C:\Users\B\Project\bot\src\posts\templates\posts
+create_post.html
+post.html
+
+Folder: C:\Users\B\Project\bot\src\posts\__pycache__
+apps.cpython-311.pyc
+__init__.cpython-311.pyc
+
+Folder: C:\Users\B\Project\bot\src\project
+asgi.py
+settings.py
+urls.py
+wsgi.py
+__init__.py
+
+Folder: C:\Users\B\Project\bot\src\project\__pycache__
+settings.cpython-311.pyc
+urls.cpython-311.pyc
+wsgi.cpython-311.pyc
+__init__.cpython-311.pyc

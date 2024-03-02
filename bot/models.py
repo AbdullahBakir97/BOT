@@ -5,7 +5,7 @@ from django.utils import timezone
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup 
 
 
 class Bot(models.Model):
